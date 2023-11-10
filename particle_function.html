@@ -26,6 +26,20 @@ function switchOff()
 	
 <input type="button" onClick="switchOn()" value="ON"/>
 <input type="button" onClick="switchOff()" value="OFF"/>
+
+<p id="status"></p>
+<input type="checkbox" id="checkbox" disabled/>
+
+<script>
+function printStatus(status) {
+  var statusText = status === 'on' ? 'ON' : 'OFF';
+  document.getElementById('status').innerText = statusText;
+  
+  var checkbox = document.getElementById('checkbox');
+  checkbox.checked = (status === 'on');
+}
+</script>
+
 	
 </body>
 </html>
