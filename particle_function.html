@@ -24,21 +24,22 @@ function switchOff()
 
 <h1>On/Off Control</h1>	
 	
-<input type="button" onClick="switchOn()" onClick="printStatus('on')" value="ON"/>
-<input type="button" onClick="switchOff()" onClick="printStatus('off')" value="OFF"/>
+<input type="button" onClick="switchStatus('on')" value="ON"/>
+<input type="button" onClick="switchStatus('off')" value="OFF"/>
 
 <p id="status"></p>
 <input type="checkbox" id="checkbox" disabled/>
 
 <script>
-function printStatus(status) {
+function switchStatus(status) {
   var statusText = status === 'on' ? 'ON' : 'OFF';
   document.getElementById('status').innerText = statusText;
   
   var checkbox = document.getElementById('checkbox');
-  checkbox.checked = (status === 'ON');
+  checkbox.checked = (status === 'on');
 }
 </script>
+
 
 	
 </body>
